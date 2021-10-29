@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+div input{
+	border-radius: 20px;
+}
+
+		
+#caixa{
+	margin: 7vh;
+	padding: 3vh;
+	border-radius: 50px;
+	width: 100% !important;
+	max-width: 1100px !important;
+	margin-left: auto;
+	margin-right: auto;
+    color: black;
+    border-radius: 44px;
+    backdrop-filter: blur(12px);
+    background-color: rgba(255,255,255, 0.265);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 1px rgba(255,255,255,0.4) solid;
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
+			
+}		
+#former input{
+	border: 2px solid black;
+	border-radius: 10px;
+}
+#caixa label{
+	font-family: 'Open Sans', sans-serif !important;
+}		
+#former select{
+	border: 2px solid black;
+}
+
+#caixa h1{
+	margin-left: 30% ;
+	margin-bottom: auto;
+	margin-top: -5%;
+}
+
+#lilacbird{
+	position: relative;	
+	left: 45%;
+	top: -5%;
+
+}

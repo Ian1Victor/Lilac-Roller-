@@ -1,0 +1,404 @@
+/*Estrutura Basica do layout*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 3fr 1fr !important;
+  grid-template-rows: 8vh minmax(8vh, auto) minmax(58vh, auto)  minmax(25vh,auto) !important;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main main "
+    "footer footer" !important;
+}
+
+/*Estilos do header e seus elementos*/
+
+header {
+  position: fixed !important;
+  display: flex !important;
+  width: 100% !important;
+  height: 9%!important;
+  background: #00dbde !important;
+  grid-area: header !important;
+  z-index: 999 !important;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 700px;
+  
+}
+
+.logo{
+  margin-left: 1.5%;
+  flex: 0.3 ;
+}
+
+.logo-name{
+  color:black;
+  letter-spacing: 5px;
+  font-size: 2em !important;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  text-shadow: 
+  /*3d layers*/
+  0px 0px 1px rgb(255,255,255),
+  0px 1px 1px rgb(255,255,255),
+  0px 2px 1px rgb(255,255,255),
+  1px 1px 1px rgb(255,255,255),
+  1px 2px 1px rgb(255,255,255),
+  1px 3px 1px rgb(255,255,255),
+  2px 2px 1px rgb(255,255,255),
+  2px 3px 1px rgb(255,255,255),
+  2px 4px 1px rgb(255,255,255);
+
+
+}
+
+.logo-name:hover{
+  text-shadow: 
+  /*3d layers*/
+  0px 0px 1px rgb(252, 0, 255),
+  0px 1px 1px rgb(252, 0, 255),
+  0px 2px 1px rgb(252, 0, 255),
+  0px 0px 1px rgb(252, 0, 255),
+  0px 1px 1px rgb(252, 0, 255),
+  0px 2px 1px rgb(252, 0, 255),
+  2px 2px 1px rgb(252, 0, 255),
+  0px 1px 1px rgb(252, 0, 255),
+  0px 2px 1px rgb(252, 0, 255);
+  color: white;
+}
+
+.space-menu{
+  flex: 0.5;
+}
+/* search-bar*/
+.search-box {
+  position: absolute !important;
+  background: #04010f !important;
+  height: auto !important;
+  border-radius: 40px !important;
+  padding: 7px;
+
+}
+
+.search-box:hover > .search-txt {
+  width: 240px !important;
+  padding: 0 6px !important;
+}
+
+.search-box:hover > .search-btn {
+  background: white !important;
+}
+
+
+.search-btn {
+  color: #00dbde !important;
+  float: right !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #04010f !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.search-txt {
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+  float: left !important;
+  padding: 0 !important;
+  color: white !important;
+  font-size: 16px !important;
+  transition: 0.4s !important;
+  line-height: 40px !important;
+  width: 0px !important;
+}
+input::placeholder{
+  color: white !important;
+}
+
+/*search bar final*/
+input{
+  position: relative ;
+}
+
+
+.acc-text{
+  flex: 0.3 ;
+  width: auto !important;
+}
+
+.user_acc{
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.user_acc:hover{
+  color: black;
+}
+
+.header-icon{
+  display: relative;
+  left: 0px;
+}
+
+/* fim dos estilos header */
+
+/* Estilizando menu*/
+nav {
+  grid-area: nav ;
+  display: flex ;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: chartreuse;
+  min-width: 700px;
+}
+nav a{
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 1.2em !important;
+  margin-left: 2%;
+}
+nav a:hover{
+  color: red !important;
+}
+/* Estilizando menu final*/
+
+/*Estilizando Links*/
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+/**************Pagina Principal**************/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180.37deg,
+    rgba(0, 219, 222, 0.34) 4.58%,
+    rgba(252, 0, 255, 0.45) 115.08%
+  );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  grid-area: main;
+
+}
+/****caixa conteudos / divs e produtos**/
+#container{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 10%;
+  flex-wrap: wrap;
+
+}
+
+.caixa-conteudo{
+  cursor: pointer;
+  display: flex;
+  margin: 14vh 6vh;
+  border-radius: 20px;
+  width: 300px;
+  height: 150px;
+  background: linear-gradient(180deg, hsla(299, 100%, 50%, 1) 0%,
+  hsla(181, 100%, 44%, 0.4) 100%);
+
+}
+
+.produto{
+  width: 50%;
+}
+
+.produto img{
+  position: relative;
+  height: 150%;
+  bottom: 40%;
+  left: -20%;
+}
+
+main a{
+  color: black;
+}
+#gabinete-gamer img{
+  top: -50%;
+
+}
+#cadeiras-gamer-secao img{
+  top: -50%;
+  /*top: -44%;*/
+}
+
+#kit-gamer-secao img{
+  width: 17vh;
+  top: -40%;
+}
+#caixa-items{
+  margin: 5vh;
+  overflow: hidden;
+
+}
+
+.caixa-link:hover{
+  color: white;
+  overflow: hidden;
+}
+.items-container{
+  cursor: pointer;
+  display: flex;
+  border-radius: 20px;
+  width: 40vh;
+  height: 20vh;
+  background: linear-gradient(180deg, hsla(299, 100%, 50%, 0.7) 0%,
+  hsla(181, 100%, 44%, 0.4) 100%);
+  transition: 0.4s !important;
+  border-radius: 47px;
+  background-color: rgba(255,255,255, 0.173);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 1px 1px;
+  border: 0px rgba(255,255,255,0.4) solid;
+  border-bottom: 0px rgba(40,40,40,0.35) solid;
+  border-right: 0px rgba(40,40,40,0.35) solid;
+}
+
+.item-title{
+  margin-top: 2vh;
+  font-size: 1em;
+  font-family: 'Glory', sans-serif;
+  font-weight: bold;
+
+}
+
+.moses{
+  width: 80%;
+  margin-top: -3%;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.173);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 0px rgba(255,255,255,0.4) solid;
+  border-bottom: 0px rgba(40,40,40,0.35) solid;
+  border-right: 0px rgba(40,40,40,0.35) solid;
+  border: 10px double hsla(299, 100%, 50%, 0.5);
+  text-align: center;
+  font-weight: bold;
+ 
+}
+.moses h1{
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif !important;
+
+}
+
+/**************Pagina Principal final**************/
+footer {
+  background: #00dbde;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-area: footer;
+  text-align: center;
+  align-items: center;
+}
+
+footer a{
+  position: relative;
+  top: -10%;
+  font-weight: bold;
+  padding: 10px;
+  color: black;
+
+}
+
+.email-get{
+  position: relative;
+  top: 10%;
+  left: -35%;
+}
+
+.email-get input{
+  border-radius: 10px;
+  width: 68%;
+}
+.email-get input::placeholder{
+  font-size: 0.89 em;
+  text-align: center;
+  color: black;
+}
+
+label{
+  display: block;
+  padding: 5px;
+}
+
+.email-get button{
+    width:auto !important;
+    height: auto;
+    display: inline !important;
+    font-size: 0.7em;
+    border-radius: 10px;
+    background: lightcoral !important;
+    color: black;
+    font-weight: bold !important;
+}
+.email-get button:hover{
+    background: black !important;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -20%;
+}
+.footer-links h4{
+    font-size: 1em !important;
+    font-weight: bold;
+}
+
+.dropbtn {
+  background: #00dbde;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: -3%;
+  margin-left: 24%;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}

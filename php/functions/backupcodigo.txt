@@ -1,0 +1,20 @@
+/*   $dbh = new PDO('mysql:host=localhost;dbname=loja','root',''); // abrindo conexao
+    $sql = "SELECT password FROM usuarios WHERE email = ?";
+    $stmt = $dbh->prepare($sql);
+    $stmt -> bindValue(1, $email, PDO::PARAM_STR);
+    $stmt -> execute(); // transação com banco de dados ultimas 4 linhas
+    $storedPassword = $stmt -> fetch(PDO::FETCH_ASSOC)['password'];
+    echo password_verify($pass, $storedPassword) ? 'Login efetuado': 'Usuario Incorreto';
+    $dbh = NULL; //fechando conexão  */
+
+
+    // $stmt -> bindValue(1, $email, PDO::PARAM_STR); //não e bom
+//$stmt-> execute()
+//$stmt -> bindParam(1, $email, PDO::PARAM_STR); //dahora
+//$stmt -> bindParam(2, $pass);
+
+/*$data = array (
+    $_POST['login-input'],
+    $_POST['senha-input'],);
+
+var_dump($data);*/

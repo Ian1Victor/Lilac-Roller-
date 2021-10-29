@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+#caixa-items{
+  margin: 5vh;
+  overflow: hidden;
+
+}
+
+.caixa-link:hover{
+  color: white;
+  overflow: hidden;
+}
+.items-container{
+  cursor: pointer;
+  display: flex;
+  border-radius: 20px;
+  width: 40vh;
+  height: 20vh;
+  background: linear-gradient(180deg, hsla(299, 100%, 50%, 0.7) 0%,
+  hsla(181, 100%, 44%, 0.4) 100%);
+  transition: 0.4s !important;
+  border-radius: 47px;
+  background-color: rgba(255,255,255, 0.173);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 1px 1px;
+  border: 0px rgba(255,255,255,0.4) solid;
+  border-bottom: 0px rgba(40,40,40,0.35) solid;
+  border-right: 0px rgba(40,40,40,0.35) solid;
+}
+
+.item-title{
+  margin-top: 2vh;
+  font-family: 'Glory', sans-serif;
+  font-weight: bold;
+
+}
+
+.moses{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -3%;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.173);
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+  border: 0px rgba(255,255,255,0.4) solid;
+  border-bottom: 0px rgba(40,40,40,0.35) solid;
+  border-right: 0px rgba(40,40,40,0.35) solid;
+  border: 10px double hsla(299, 100%, 50%, 0.5);
+  text-align: center;
+  font-weight: bold;
+ 
+}
+.moses h1{
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif !important;
+
+}

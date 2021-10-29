@@ -1,0 +1,74 @@
+.container-master{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+
+}
+.caixa-update{
+    width: 600px;
+}
+.container-update{
+    height: 200px;
+    width: 600px;
+    border-radius: 50px !;
+}
+#update-item-title{
+    text-align: start;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    padding: 30px 10px 50px;
+}
+
+.img-update{
+    padding-left: 10px;
+}
+
+.btn-adm{
+    margin-top: 50px;
+}
+.btn-edit{
+    background: #00dbde;
+    margin:0 10px 10px;
+    width: 100px;
+    height: 40px;
+    color:black;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-edit:hover{
+    background: #12d6da;
+}
+.btn-edit:focus{
+    background: #31f3f7;
+}
+
+.btn-delet{
+    background: hsla(299, 100%, 50%, 1);
+    margin:0 10px 10px;
+    width: 100px;
+    height: 40px;
+    color:black;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-delet:hover{
+    background: hsla(299, 100%, 50%, 1);
+}
+.btn-delet:focus{
+    background: rgb(251, 39, 255);
+}
+
+.btn-icon{
+    margin-top: -6px;
+    display: inline;
+    height: 20px;
+    width: 20px;
+}
+
+
