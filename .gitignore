@@ -1,4 +1,5 @@
 *.sqlite
 log.txt
 teste.*
-img_catalogo/
+*.png
+img_catalogo

@@ -5,6 +5,8 @@ class DbConfig{
     protected function __construct(){
         $this->dbh = new PDO('mysql:host=localhost;dbname=lilac','root','');
         $this->createUsersTable();
+        $this->createProductsTable();
+        $this->createShoppingcartTable();
     }
 
     private function createUsersTable(){
@@ -41,10 +43,10 @@ class DbConfig{
 
     private function createShoppingcartTable() {
         $this->dbh->exec('CREATE TABLE IF NOT EXISTS shoppingcart(
-            product_id INT UNSIGNED NOT NULL,
+            product_id INT NOT NULL,
             user_email VARCHAR(255) NOT NULL,
-            FOREIGN KEY(product_id) REFERENCES Products(id),
-            FOREIGN KEY (user_email) REFERENCES Users(email)
+            FOREIGN KEY(product_id) REFERENCES Produtos(id),
+            FOREIGN KEY(user_email) REFERENCES Usuarios(email)
             )');
     }
 }
