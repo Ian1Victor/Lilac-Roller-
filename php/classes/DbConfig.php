@@ -19,7 +19,7 @@ class DbConfig{
             estado varchar(20),
             cep varchar(9),
             genero varchar(13),
-            email varchar(20) PRIMARY KEY,
+            email varchar(255) PRIMARY KEY,
             telefone varchar(13),
             nomesocial varchar(255),
             password varchar(255),

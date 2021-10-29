@@ -4,6 +4,7 @@ require_once($functionsDir . '/classesAutoload.php');
 $monthInSeconds = 30*24*60*60;
 
 if ($_SERVER ['REQUEST_METHOD'] ==="POST"){
+    $status = $_POST['status-input'] ? $_POST['senha-input'] : 'user';
     $password = password_hash($_POST['senha-input'], PASSWORD_DEFAULT);
     $data = array (
         [$_POST['nome-input'], PDO::PARAM_STR],
@@ -18,8 +19,8 @@ if ($_SERVER ['REQUEST_METHOD'] ==="POST"){
         [$_POST['telefone-input'],  PDO::PARAM_STR],
         [$_POST['social-input'],  PDO::PARAM_STR],
         [$password, PDO::PARAM_STR],
-        [$_POST['tipo-input'] ,  PDO::PARAM_STR]
-
+        [$_POST['tipo-input'] ,  PDO::PARAM_STR],
+        [$_POST['status-input'] ,  PDO::PARAM_STR]
     );
     
     try {
@@ -41,6 +42,7 @@ if ($_SERVER ['REQUEST_METHOD'] ==="POST"){
             );
         $_SESSION['userEmail'] = $_POST['email-input'];
         $_SESSION['userFullName'] = ucwords($_POST['nome-input']) . ' ' . ucwords($_POST['sobrenome-input']);
+        $_SESSION['userStatus'] = $status;
         header('Location: /');
     }
     else {
