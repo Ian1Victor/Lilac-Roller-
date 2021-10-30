@@ -43,28 +43,27 @@ $teste = $data[0];
     <div class="container-master">
       <?php foreach($data as $product):; ?> 
         <div id="caixa-items" class="caixa-update"><!--Caixa para os items-->
-            <div class="items-container container-update">
-            <img class="img-update" src="<?php echo($baseURL . $product['imagem']); ?>">
-              <div class="flexboxteste">
-                <h4 class="item-title update-item-title"><?php echo $product['name']; ?></h4>
-                <h3 class="item-title update-item-title">R$ <?php echo formatToBRL($product['preco']); ?></h3>
-                <p><?php echo $product['descricao'];?></p>
-              </div>
-              <div class="btn-adm">
-                <button class="btn-edit btn btn-primary btn-grad">
-                  <img src="../pics/editicon.png" class="btn-icon">
-                  <span>Editar</span>
-                </button>
-                <button class="btn-delet btn btn-primary">
-                  <img src="../pics/deleteicon.png" class="btn-icon">
-                  <span>Excluir</span>
-                </button>
-              </div>
+          <div class="items-container container-update">
+          <img class="img-update" src="<?php echo($baseURL . $product['imagem']); ?>">
+            <div class="flexboxteste">
+              <h4 class="item-title update-item-title"><?php echo $product['name']; ?></h4>
+              <h3 class="item-title update-item-title">R$ <?php echo formatToBRL($product['preco']); ?></h3>
+              <p><?php echo $product['descricao'];?></p>
             </div>
+            <div class="btn-adm">
+              <button class="btn-edit btn btn-primary btn-grad">
+                <img src="../pics/editicon.png" class="btn-icon">
+                <span>Editar</span>
+              </button>
+              <button class="btn-delet btn btn-primary">
+                <img src="../pics/deleteicon.png" class="btn-icon">
+                <a href="../php/handlers/handleDeleteProduct.php?pid=<?php echo $product['id']; ?>">Excluir</a>
+              </button>
+            </div>
+          </div>
         </div>
-        <?php endforeach; ?>
-        <!--Caixa para os items fim-->
-        
+      <?php endforeach; ?>
+      <!--Caixa para os items fim-->   
     </div><!--main container final-->
   </main>
     
