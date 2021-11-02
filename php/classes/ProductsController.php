@@ -41,4 +41,13 @@ class ProductsController extends DbConfig{
         $stmt -> bindValue((count($data)+1), $id, PDO::PARAM_STR);
         return $stmt->execute();
     }
+
+    public function deleteProduct($id) {
+        $sql = <<<SQL
+        DELETE FROM produtos WHERE id = :id
+        SQL;
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
 };

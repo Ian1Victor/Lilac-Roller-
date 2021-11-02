@@ -2,18 +2,18 @@
 require_once('../functions/classesAutoload.php');
 require_once('../functions/logError.php');
 
-function makePath($separator=DIRECTORY_SEPARATOR, ...$segments) {
+function makePath($separator, ...$segments) {
     return implode($separator, $segments);
 }
 
 if ($_SERVER ['REQUEST_METHOD'] ==="POST"){
 
     $root = dirname(dirname(__DIR__));
-    $relativePath = realpath($root . '/img_catalogo');
+    $relativePath = 'img_catalogo';
     $fileName = $_FILES['imagem-input']['name'];
-    $imgDestination = $relativePath . '\\' . $fileName;
+    $imgDestination = makePath(DIRECTORY_SEPARATOR, $root, $relativePath, $fileName);
     move_uploaded_file($_FILES['imagem-input']['tmp_name'], $imgDestination);
-    $resourcePath = realpath($relativePath . "/{$fileName}");
+    $resourcePath = '/' . makePath('/', $relativePath, $fileName);
 
     $data = array (
         [$_POST['nome-input'], PDO::PARAM_STR],

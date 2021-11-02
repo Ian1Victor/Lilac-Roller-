@@ -53,16 +53,16 @@ $teste = $data[0];
               <div class="btn-adm">
                 <button class="btn-edit btn btn-primary btn-grad">
                   <img src="../pics/editicon.png" class="btn-icon">
-                  <span>Editar</span>
+                  <a>Editar</a>
                 </button>
                 <button class="btn-delet btn btn-primary">
                   <img src="../pics/deleteicon.png" class="btn-icon">
-                  <span>Excluir</span>
+                  <a href="../php/handlers/handleDeleteProduct.php?pid=<?php echo $product['id']; ?>">Excluir</a>
                 </button>
               </div>
             </div>
         </div>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
         <!--Caixa para os items fim-->
         
     </div><!--main container final-->
