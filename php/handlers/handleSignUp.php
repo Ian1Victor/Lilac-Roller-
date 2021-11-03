@@ -19,8 +19,8 @@ if ($_SERVER ['REQUEST_METHOD'] ==="POST"){
         [$_POST['telefone-input'],  PDO::PARAM_STR],
         [$_POST['social-input'],  PDO::PARAM_STR],
         [$password, PDO::PARAM_STR],
-        [$_POST['tipo-input'] ,  PDO::PARAM_STR]
-
+        [$_POST['tipo-input'] ,  PDO::PARAM_STR],
+        [$_POST['status-input'] ,  PDO::PARAM_STR]
     );
     
     try {
