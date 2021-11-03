@@ -20,7 +20,7 @@ $data = $products->getProduct($_GET['pid']);
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="../css/product.css" />
+  <link rel="stylesheet" type="text/css" href="../css/Product.css" />
   <link rel="icon" type="image/x-icon" href="../pics/lilac-icon.png">
 
   <title>Lilac Roller</title>
@@ -45,9 +45,9 @@ $data = $products->getProduct($_GET['pid']);
           <h4 class="item-title"><?php echo $data['name'];?> </h4>
           <h3 class="item-title">R$ <?php echo formatToBRL($data['preco']);?></h3>
           <p><?php echo $data['descricao'];?></p> 
-          <h6><?php echo $data['ficha_tecnica']; ?></h6>
           <a href="carrinho.php" id="fCart">Adicionar ao Carrinho</a>
         </div>
+        <h6><?php echo $data['ficha_tecnica']; ?></h6>
       </div>
     </div>
    </main>

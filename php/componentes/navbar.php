@@ -8,4 +8,4 @@
     <a href="../html/memoram.html">Memorias</a>
     <p class="separator" style="color: white;">|</p>
     <a href="../html/discossdhd.html">Discos Rigidos</a>
-  </nav>
+</nav>

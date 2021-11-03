@@ -40,10 +40,12 @@ else if ($_SESSION['userStatus'] === 'user') {
 
   <main>
       <div id="caixa">
-      <img style="display:flex; flex-wrap: wrap; "class="mb-4 rgbi" id ="lilacbird"src="https://www.birdorable.com/img/bird/th440/lilac-breasted-roller.png" alt="Lilac Roller" width="68" height="54">
+      <img style="display:flex; flex-wrap: wrap; top: -3px;" 
+      class="mb-4 rgbi" id ="lilacbird"src="https://www.birdorable.com/img/bird/th440/lilac-breasted-roller.png" 
+      alt="Lilac Roller" width="68" height="54">
         <br>
         <h1>Bem Vindo Administrador</h1>
-        <br>
+        <hr>
         <h3>Adicione aqui novos produtos em nossa loja. </h3>
        
         <form class="row g-1" id="former" method="POST" action="../php/handlers/handleInsertProduct.php" 

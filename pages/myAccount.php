@@ -40,7 +40,7 @@ $data = $users->getAllUserData($_SESSION['userEmail']);
 
   <main>
       <div id="caixa">
-        <img style="display:flex; flex-wrap: wrap; "class="mb-4 rgbi" id ="lilacbird"
+        <img style="display:flex; flex-wrap: wrap; top: -3px; "class="mb-4 rgbi" id ="lilacbird"
         src="https://www.birdorable.com/img/bird/th440/lilac-breasted-roller.png" 
         alt="Lilac Roller" width="68" height="54"
         >
@@ -48,6 +48,7 @@ $data = $users->getAllUserData($_SESSION['userEmail']);
         <br>
         <h1>Bem Vindo a Lilac Roller</h1>
         <h3 style="text-align: center">Complete o cadastro para acessar promoções exclusivas.</h3>
+        <hr>
 
         <!-- Formulário -->
         <form class="row g-1" id="former" method="POST" action="../php/handlers/handleUserUpdate.php" autocomplete="on">

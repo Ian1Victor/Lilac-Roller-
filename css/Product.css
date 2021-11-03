@@ -12,7 +12,7 @@ body {
   position: relative !important;
   display: grid !important;
   grid-template-columns: 3fr 1fr !important;
-  grid-template-rows: 8vh minmax(8vh,  50%) minmax(58vh,  50%)  minmax(25vh, 50%) !important;
+  grid-template-rows: 8vh minmax(8vh, auto) minmax(58vh, auto)  minmax(25vh,auto) !important;
   grid-template-areas:
     "header header"
     "nav nav"
@@ -85,7 +85,7 @@ header {
 .search-box {
   position: absolute !important;
   background: #04010f !important;
-  height:  50% !important;
+  height: auto !important;
   border-radius: 40px !important;
   padding: 7px;
 
@@ -137,7 +137,7 @@ input{
 
 .acc-text{
   flex: 0.3 ;
-  width:  50% !important;
+  width: auto !important;
 }
 
 .user_acc{
@@ -201,14 +201,15 @@ main {
 }
 /****caixa conteudos / divs e produtos**/
 
-#caixa-items{
-  margin: 5vh;
-}
-
 .productIMG{
   max-height: 70%;
   max-width: 70%;
-  margin-left: -5%;
+  margin-left: -15%;
+  margin-right: 5%;
+}
+
+#caixa-items{
+  margin: 5vh;
 }
 
 .caixa-link{
@@ -220,7 +221,7 @@ main {
   max-height: 50%;
   background: linear-gradient(180deg, hsla(299, 100%, 50%, 0.7) 0%,
   hsla(181, 100%, 44%, 0.4) 100%);
-  transition: 0.4s !important;
+  transition: 0.4s ;
   border-radius: 47px;
   background-color: rgba(255,255,255, 0.173);
   box-shadow: rgba(0, 0, 0, 0.3) 2px 1px 1px;
@@ -234,6 +235,7 @@ main {
   position: static;
   height: 50%;
   width: 50%;
+  margin-bottom: -15%;
 }
 
 .caixa-link:hover{
@@ -242,9 +244,11 @@ main {
 
 .items-container{
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 1%;
+  margin-left: 1%;
 }
 
 .item-title{
@@ -317,17 +321,17 @@ label{
 }
 
 .email-get button{
-    width: 50% !important;
+    width: 50% ;
     height:  50%;
-    display: inline !important;
+    display: inline ;
     font-size: 0.7em;
     border-radius: 10px;
-    background: lightcoral !important;
+    background: lightcoral ;
     color: black;
-    font-weight: bold !important;
+    font-weight: bold ;
 }
 .email-get button:hover{
-    background: black !important;
+    background: black ;
 }
 .footer-links{
     display: flex;
@@ -336,7 +340,7 @@ label{
     top: -20%;
 }
 .footer-links h4{
-    font-size: 1em !important;
+    font-size: 1em ;
     font-weight: bold;
 }
 
