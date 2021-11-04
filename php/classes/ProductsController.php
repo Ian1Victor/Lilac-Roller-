@@ -33,7 +33,7 @@ class ProductsController extends DbConfig{
     }
 
     public function UpdateProductsData($data, $id) {
-        $sql ='UPDATE produtos SET name=?,preco=?,estoque=?,categoria=?,descricao=?,imagem=?, ficha_tecninca=? WHERE id=?';
+        $sql ='UPDATE produtos SET name=?, preco=?, estoque=?, imagem=IFNULL(?, imagem), categoria=?, descricao=?, ficha_tecnica=? WHERE id=?';
         $stmt = $this ->dbh->prepare($sql);
         foreach($data as $key => $value){
             $stmt -> bindValue(($key+1), $value[0], $value[1]);
